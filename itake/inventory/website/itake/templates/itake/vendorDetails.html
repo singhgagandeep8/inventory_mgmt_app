@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>vendorDetails</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="collapse navbar-collapse row" id="navigation">
+        <div class="container">
+            <div class="col-lg-12">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a data-toggle="bar" href="{% url 'itake:index' %}">Home Page</a></li>
+            <li><a data-toggle="bar" href="{% url 'itake:productList' %}">Product</a></li>
+            <li><a data-toggle="bar" href="{% url 'itake:vendorList' %}">Vendor</a></li>
+            <li><a data-toggle="bar" href="{% url 'itake:orderList' %}">Order</a></li>
+                 <li><a data-toggle="bar" href="{% url 'itake:login' %}">Login</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+<br><br><br>
+</div>
+
+<div class="container">
+
+    <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">
+                    {{vendor.vendorName}}
+                </h2>
+                <br>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h4>Vendor Details</h4>
+            <ul>
+                <li>Vendor Name: {{vendor.category}}</li>
+                <li>Email:{{vendor.vendorEmail}} </li>
+                <li>Phone:{{vendor.vendorPhone}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
